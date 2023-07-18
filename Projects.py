@@ -65,8 +65,27 @@ def EmailSlicer(file):
 
 
 def BinarySearch(list, key):
-    
-    pass
+    sortedList = sorted(list)
+
+    print(sortedList)
+
+    start = 0
+    end = len(sortedList) - 1
+
+    while start <= end:
+        # mid = int((start + end) / 2)
+        mid = (start + end) // 2
+
+        if sortedList[mid] == key:
+            return mid
+        elif sortedList[mid] <= key:
+            start = mid + 1
+        else:
+            end = mid - 1
+
+    return "Key is Not Present in list"
 
 
-dataList = [55, 11, 10, 44, 66, 77]
+# dataList = [55, 11, 10, 44, 66, 77]
+
+# print("index : ", BinarySearch(dataList, 10))
