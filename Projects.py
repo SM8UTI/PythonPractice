@@ -72,9 +72,15 @@ def BinarySearch(list, key):
     start = 0
     end = len(sortedList) - 1
 
+    step = 1
+
     while start <= end:
+        print("Step ", step, ":", str(sortedList[start : end + 1]))
+
         # mid = int((start + end) / 2)
         mid = (start + end) // 2
+
+        step += 1
 
         if sortedList[mid] == key:
             return mid
@@ -88,4 +94,4 @@ def BinarySearch(list, key):
 
 # dataList = [55, 11, 10, 44, 66, 77]
 
-# print("index : ", BinarySearch(dataList, 10))
+# print("index : ", BinarySearch(dataList, 77))
