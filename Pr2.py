@@ -1,3 +1,7 @@
+
+
+
+
 class Computer:
     def __init__(self):
         self.name = "Smruti"
